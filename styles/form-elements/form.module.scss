@@ -1,0 +1,21 @@
+.form {
+  width: 456px;
+  box-sizing: border-box;
+  padding: 48px;
+  border-radius: 16px;
+  background-color: #293038;
+  fieldset {
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.form__line {
+  width: 100%;
+  display: block;
+  height: 1px;
+  background: #38404c;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "next-test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BogdanLapshin/next-test-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BogdanLapshin/next-test-task/issues"
+  },
+  "homepage": "https://github.com/BogdanLapshin/next-test-task#readme",
+  "dependencies": {
+    "next": "^11.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.42.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.26",
+    "typescript": "^4.4.3"
+  }
+}
