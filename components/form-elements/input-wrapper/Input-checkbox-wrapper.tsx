@@ -16,8 +16,8 @@ const InputCheckboxWrapper = (props) => {
   return (
     <InputWrapper>
       <Label label={props.label} tips={props.label_tip} />
-      <div className={styles.checkboxes__wrapper} onChange={showRole}>
-        <div className={styles.checkboxes__inner}>
+      <ul className={styles.checkboxes__wrapper} onChange={showRole}>
+        <li className={styles.checkboxes__inner}>
           <Input
             type="radio"
             inputId="role-1"
@@ -25,8 +25,8 @@ const InputCheckboxWrapper = (props) => {
             custom_class={styles.input__checkbox}
           />
           <label htmlFor="role-1">Кнопка1</label>
-        </div>
-        <div className={styles.checkboxes__inner}>
+        </li>
+        <li className={styles.checkboxes__inner}>
           <Input
             type="radio"
             inputId="role-2"
@@ -34,8 +34,8 @@ const InputCheckboxWrapper = (props) => {
             custom_class={styles.input__checkbox}
           />
           <label htmlFor="role-2">Кнопка2</label>
-        </div>
-        <div className={styles.checkboxes__inner}>
+        </li>
+        <li className={styles.checkboxes__inner}>
           <Input
             type="radio"
             inputId="role-3"
@@ -43,8 +43,8 @@ const InputCheckboxWrapper = (props) => {
             custom_class={styles.input__checkbox}
           />
           <label htmlFor="role-3">Кнопка3</label>
-        </div>
-      </div>
+        </li>
+      </ul>
       <div className={styles.role__info}>{roleTxt[role]}</div>
     </InputWrapper>
   );

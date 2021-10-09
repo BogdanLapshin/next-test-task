@@ -1,8 +1,14 @@
 import styles from "../../styles/logo/logo.module.scss";
 const Logo = (props) => {
-  const logoSize = props.size + "px";
   return (
-    <div className={styles.logo} style={{fontSize: logoSize}}>
+    <div
+      className={
+        styles.logo +
+        (props.custom_class == undefined
+          ? ""
+          : " " + styles[props.custom_class])
+      }
+    >
       Nukle<span>Ball</span>
     </div>
   );

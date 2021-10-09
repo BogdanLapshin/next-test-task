@@ -4,7 +4,7 @@ const BackgroundImg = () => {
   return (
     <div className={styles.bg__img}>
       <div className={styles.logo__wrapper}>
-        <Logo size="51" />
+        <Logo />
         <div className={styles.project__info}>Краткое описание проекта</div>
       </div>
     </div>
