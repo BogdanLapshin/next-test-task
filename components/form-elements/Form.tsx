@@ -1,6 +1,6 @@
 import styles from "../../styles/form-elements/form.module.scss";
 import SocialMedia from "../social-media/Social-media";
-import SubmitButton from "./buttons/SubmitButton";
+import SubmitButton from "./SubmitButton/SubmitButton";
 import FormTitle from "./form-title/Form-title";
 import InputCheckboxWrapper from "./input-wrapper/Input-checkbox-wrapper";
 import InputPassWrapper from "./input-wrapper/Input-pass-wrapper";
@@ -36,7 +36,7 @@ const Form = (props) => {
               label_tip={<Tips content="?" />}
               name="check-role"
             />
-            <SubmitButton btn_text="Продолжить" />
+            <SubmitButton text="Продолжить" />
           </fieldset>
           <SocialMedia text="Или создать аккаунт при помощи" />
         </form>
@@ -57,7 +57,7 @@ const Form = (props) => {
               <Input type="email" inputId="mail" />
             </InputWrapper>
             <InputPassWrapper label="Пароль" inputId="pass" tip_content="?" />
-            <SubmitButton btn_text="Продолжить" />
+            <SubmitButton text="Продолжить" />
           </fieldset>
           <SocialMedia text="Войти при помощи" />
         </form>
