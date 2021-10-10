@@ -10,4 +10,10 @@
   span {
     color: #63efaf;
   }
+  @media screen and (max-width: 920px) {
+    font-size: 46px;
+  }
+  &._small {
+    font-size: 16px;
+  }
 }

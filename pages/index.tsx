@@ -14,7 +14,7 @@ const index = () => {
       </Head>
       <div className="wrapper">
         <BackgroundImg />
-        <FormArea />
+        <FormArea form_type="reg" />
       </div>
     </>
   );
