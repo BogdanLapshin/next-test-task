@@ -35,7 +35,7 @@ const InputPassWrapper: React.FC<InputPassWrapperPropsType> = ({
         type={type ? "password" : "text"}
         inputId={inputId}
         name={name}
-        // register={}
+        register={register(name)}
         dataRegister={dataRegister}
       />
       <span

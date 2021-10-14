@@ -52,7 +52,7 @@ const Form: React.FC<FormPropsType> = (props) => {
               inputId="re-pass"
               tip_content="?"
               name="re-password"
-              register={register("re-pass")}
+              register={register}
             />
             <span className={styles.form__line} />
             <InputCheckboxWrapper
@@ -65,7 +65,6 @@ const Form: React.FC<FormPropsType> = (props) => {
           <SocialMedia text="Или создать аккаунт при помощи" />
         </form>
       );
-      break;
     case "auth":
       return (
         <form className={styles.form_auth}>
@@ -86,7 +85,6 @@ const Form: React.FC<FormPropsType> = (props) => {
           <SocialMedia text="Войти при помощи" />
         </form>
       );
-      break;
   }
 };
 
