@@ -1,6 +1,12 @@
 import styles from "../../../styles/form-elements/form-title/form-title.module.scss";
 import Link from "next/link";
-const FormTitle = (props) => {
+type FormTitlePropsType = {
+  title?: string;
+  suggestion?: string;
+  suggest_link?: string;
+  action?: string;
+};
+const FormTitle: React.FC<FormTitlePropsType> = (props) => {
   return (
     <>
       <legend className={styles.form__title}>{props.title}</legend>

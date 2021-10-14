@@ -4,7 +4,22 @@ import InputWrapper from "./Input-wrapper";
 import styles from "../../../styles/form-elements/input-wrapper/input-pass-wrapper.module.scss";
 import {useState} from "react";
 import Tips from "../labels/Tips";
-const InputPassWrapper = (props) => {
+type InputPassWrapperPropsType = {
+  label?: string;
+  inputId?: string;
+  tip_content?: string;
+  name?: string;
+  register?: any;
+  dataRegister?: string;
+};
+const InputPassWrapper: React.FC<InputPassWrapperPropsType> = ({
+  label,
+  inputId,
+  tip_content,
+  name,
+  register,
+  dataRegister,
+}) => {
   const [type, setType] = useState(true);
   function viewPassword() {
     setType(!type);
@@ -12,11 +27,17 @@ const InputPassWrapper = (props) => {
   return (
     <InputWrapper className={styles.input_pass_wrapper}>
       <Label
-        label={props.label}
-        inputId={props.inputId}
-        tips={<Tips content={props.tip_content} />}
+        label={label}
+        inputId={inputId}
+        tips={<Tips content={tip_content} />}
       />
-      <Input type={type ? "password" : "text"} inputId={props.inputId} />
+      <Input
+        type={type ? "password" : "text"}
+        inputId={inputId}
+        name={name}
+        // register={}
+        dataRegister={dataRegister}
+      />
       <span
         onClick={viewPassword}
         className={

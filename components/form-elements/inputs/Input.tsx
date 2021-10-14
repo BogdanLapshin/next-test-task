@@ -1,14 +1,31 @@
 import styles from "../../../styles/form-elements/inputs/input.module.scss";
-const Input = (props) => {
+type InputPassWrapperPropsType = {
+  custom_class?: string;
+  inputId?: string;
+  type?: string;
+  name?: string;
+  register?: any;
+  dataRegister?: string;
+};
+const Input: React.FC<InputPassWrapperPropsType> = ({
+  custom_class,
+  inputId,
+  type,
+  name,
+  register,
+  dataRegister,
+}) => {
   return (
     <input
+      {...register}
       className={
         styles.form__input +
-        (props.custom_class == undefined ? "" : " " + props.custom_class)
+        (custom_class == undefined ? "" : " " + custom_class)
       }
-      type={props.type}
-      id={props.inputId}
-      name={props.name}
+      type={type}
+      id={inputId}
+      name={name}
+      dataRegister={dataRegister}
     />
   );
 };

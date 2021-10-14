@@ -1,9 +1,5 @@
 .submit {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  color: #ffffff;
+  margin-top: 36px;
   width: 180px;
   height: 43px;
   display: flex;
@@ -32,4 +28,9 @@
 
 .wrapper {
   position: relative;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
 }

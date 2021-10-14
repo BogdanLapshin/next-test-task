@@ -13,7 +13,7 @@ const auth = () => {
           rel="stylesheet"
         />
       </Head>
-      <div className="wrapper">
+      <div className="wrapper-auth">
         <BackgroundImg />
         <FormArea form_type="auth" />
       </div>

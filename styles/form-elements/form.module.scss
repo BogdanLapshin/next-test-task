@@ -1,7 +1,8 @@
-.form {
+.form,
+.form_auth {
   width: 456px;
   box-sizing: border-box;
-  padding: 48px;
+  padding: 50px 48px 18px;
   border-radius: 16px;
   background-color: #293038;
   fieldset {
@@ -17,6 +18,15 @@
     padding: 0;
     width: 327px;
   }
+  @media screen and (max-width: 350px) {
+    width: 90%;
+  }
+}
+.form {
+  margin: 25px 0 46px;
+}
+.form_auth {
+  margin: 21px 0 45px;
 }
 
 .form__line {
