@@ -1,32 +1,38 @@
 import styles from "../../../styles/form-elements/inputs/input.module.scss";
 type InputPassWrapperPropsType = {
-  custom_class?: string;
   inputId?: string;
   type?: string;
   name?: string;
   register?: any;
-  dataRegister?: string;
+  trigger?: any;
+  errors?: any;
 };
 const Input: React.FC<InputPassWrapperPropsType> = ({
-  custom_class,
   inputId,
   type,
   name,
   register,
-  dataRegister,
+  errors,
+  trigger,
 }) => {
+  const invalidClassname = errors[name] ? " " + styles.invalid : "";
   return (
-    <input
-      {...register}
-      className={
-        styles.form__input +
-        (custom_class == undefined ? "" : " " + custom_class)
-      }
-      type={type}
-      id={inputId}
-      name={name}
-      dataRegister={dataRegister}
-    />
+    <>
+      <input
+        {...register}
+        className={styles.form__input + invalidClassname}
+        type={type}
+        id={inputId}
+        name={name}
+        onKeyUp={() => {
+          trigger(name);
+        }}
+        onBlur={() => {}}
+      />
+      {errors[name] && (
+        <p className={styles.input__error__msg}>{errors[name].message}</p>
+      )}
+    </>
   );
 };
 export default Input;

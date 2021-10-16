@@ -1,10 +1,7 @@
 .input__eye {
-  position: absolute;
-  right: 16px;
-  bottom: 17px;
   width: 17px;
-  background: red;
   height: 12px;
+  cursor: pointer;
 }
 .eye_open {
   background: url("../../../public/assets/icons/eye-open.svg") center center
@@ -21,4 +18,15 @@
 .input_pass_wrapper {
   position: relative;
   width: 100%;
+}
+.span__wrapper {
+  position: absolute;
+  bottom: 0;
+  height: 47px;
+  width: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  border-radius: 0 8px 8px 0;
 }

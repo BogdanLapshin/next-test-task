@@ -6,7 +6,7 @@ type LogoPropsTypes = {
 
 const Logo: React.FC<LogoPropsTypes> = (props) => {
   const classNames = [styles.logo];
-  props.className !== "" && classNames.push(styles[props.className]);
+  props.className !== "" && classNames.push(props.className);
 
   return (
     <div className={classNames.join(" ")}>
