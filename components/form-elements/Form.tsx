@@ -20,6 +20,7 @@ const Form: React.FC<FormPropsType> = (props) => {
     formState: {errors},
     trigger,
     reset,
+    watch,
   } = useForm();
   const sbmtForm = (data) => {
     console.log(data);
@@ -28,7 +29,11 @@ const Form: React.FC<FormPropsType> = (props) => {
   switch (props.form_type) {
     case "reg":
       return (
-        <form className={styles.form} onSubmit={handleSubmit(sbmtForm)}>
+        <form
+          className={styles.form}
+          onSubmit={handleSubmit(sbmtForm)}
+          noValidate
+        >
           <fieldset>
             <FormTitle
               title="Регистрация"
@@ -70,6 +75,7 @@ const Form: React.FC<FormPropsType> = (props) => {
               register={register}
               errors={errors}
               trigger={trigger}
+              watch={watch("password")}
             />
             <span className={styles.form__line} />
             <InputCheckboxWrapper
@@ -86,7 +92,11 @@ const Form: React.FC<FormPropsType> = (props) => {
       break;
     case "auth":
       return (
-        <form className={styles.form_auth} onSubmit={handleSubmit(sbmtForm)}>
+        <form
+          className={styles.form_auth}
+          onSubmit={handleSubmit(sbmtForm)}
+          noValidate
+        >
           <fieldset>
             <FormTitle
               title="Войти"
