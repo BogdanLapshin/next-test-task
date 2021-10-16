@@ -14,7 +14,13 @@ type FormPropsType = {
 };
 
 const Form: React.FC<FormPropsType> = (props) => {
-  const {register, handleSubmit} = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: {errors},
+    trigger,
+    reset,
+  } = useForm();
   const sbmtForm = (data) => {
     console.log(data);
     return data;
@@ -36,29 +42,41 @@ const Form: React.FC<FormPropsType> = (props) => {
                 type="email"
                 inputId="mail"
                 name="email"
-                register={register("email")}
+                errors={errors}
+                trigger={trigger}
+                register={register("email", {
+                  required: "This field is required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i,
+                    message: "Incorrect email",
+                  },
+                })}
               />
             </InputWrapper>
             <InputPassWrapper
               label="Пароль"
               inputId="pass"
-              tip_content="?"
+              tip_content={<div>?</div>}
               name="password"
               register={register}
-              dataRegister="test-data"
+              errors={errors}
+              trigger={trigger}
             />
             <InputPassWrapper
               label="Повторите пароль"
               inputId="re-pass"
-              tip_content="?"
+              tip_content={<div>?</div>}
               name="re-password"
-              register={register("re-pass")}
+              register={register}
+              errors={errors}
+              trigger={trigger}
             />
             <span className={styles.form__line} />
             <InputCheckboxWrapper
               label="Ваша роль"
-              label_tip={<Tips content="?" />}
-              name="check-role"
+              label_tip={<Tips content={<div>?</div>} />}
+              name="role"
+              register={register("roole")}
             />
             <SubmitButton text="Продолжить" />
           </fieldset>
@@ -68,7 +86,7 @@ const Form: React.FC<FormPropsType> = (props) => {
       break;
     case "auth":
       return (
-        <form className={styles.form_auth}>
+        <form className={styles.form_auth} onSubmit={handleSubmit(sbmtForm)}>
           <fieldset>
             <FormTitle
               title="Войти"
@@ -78,9 +96,30 @@ const Form: React.FC<FormPropsType> = (props) => {
             />
             <InputWrapper>
               <Label inputId="mail" label="Ваш E-mail" />
-              <Input type="email" inputId="mail" />
+              <Input
+                type="email"
+                inputId="mail"
+                name="email"
+                errors={errors}
+                trigger={trigger}
+                register={register("email", {
+                  required: "This field is required",
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i,
+                    message: "Incorrect email",
+                  },
+                })}
+              />
             </InputWrapper>
-            <InputPassWrapper label="Пароль" inputId="pass" tip_content="?" />
+            <InputPassWrapper
+              label="Пароль"
+              inputId="pass"
+              tip_content={<div>?</div>}
+              name="password"
+              register={register}
+              errors={errors}
+              trigger={trigger}
+            />
             <SubmitButton text="Продолжить" />
           </fieldset>
           <SocialMedia text="Войти при помощи" />

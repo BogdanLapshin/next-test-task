@@ -13,6 +13,7 @@
   cursor: pointer;
   padding: 0;
   margin-bottom: 24px;
+  transition: all 0.3s ease-in-out;
   &:active {
     outline: none;
   }
@@ -23,6 +24,11 @@
     height: 41px;
     position: absolute;
     background-color: #293038;
+  }
+  &:hover {
+    background-position: 100% 0;
+    background-size: 300% 100%;
+    transform: scale(1.03);
   }
 }
 
