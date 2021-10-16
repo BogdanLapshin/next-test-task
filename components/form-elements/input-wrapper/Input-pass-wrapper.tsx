@@ -10,9 +10,9 @@ type InputPassWrapperPropsType = {
   tip_content?: ReactElement;
   name?: string;
   register?: any;
-  dataRegister?: string;
   errors?: any;
   trigger?: any;
+  watch?: any;
 };
 const InputPassWrapper: React.FC<InputPassWrapperPropsType> = ({
   label,
@@ -20,9 +20,9 @@ const InputPassWrapper: React.FC<InputPassWrapperPropsType> = ({
   tip_content,
   name,
   register,
-  dataRegister,
   errors,
   trigger,
+  watch,
 }) => {
   const [type, setType] = useState(true);
   function viewPassword() {
@@ -43,8 +43,10 @@ const InputPassWrapper: React.FC<InputPassWrapperPropsType> = ({
           required: "This field is required",
           pattern: {
             value: /(?=.*[0-9])[0-9a-z]{6,}/g,
-            message: "Password invalid",
+            message: "Invalid password",
           },
+          validate: (value) =>
+            value === watch || (watch && "Passwords don't match."),
         })}
         errors={errors}
         trigger={trigger}
