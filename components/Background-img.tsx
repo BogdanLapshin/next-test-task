@@ -1,6 +1,6 @@
 import styles from "../styles/background-img.module.scss";
 import Logo from "./logo/Logo";
-const BackgroundImg = () => {
+const BackgroundImg: React.FC = (): JSX.Element => {
   return (
     <div className={styles.bg__img}>
       <div className={styles.logo__wrapper}>

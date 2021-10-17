@@ -1,7 +1,7 @@
 import FormArea from "../components/Form-area";
 import BackgroundImg from "../components/Background-img";
 import Head from "next/head";
-const index = () => {
+const index: React.FC = (): JSX.Element => {
   return (
     <>
       <Head>

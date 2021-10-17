@@ -6,11 +6,11 @@ import styles from "../styles/form-area.module.scss";
 type FormAreaPropsTypes = {
   form_type?: string;
 };
-const FormArea: React.FC<FormAreaPropsTypes> = (props) => {
+const FormArea: React.FC<FormAreaPropsTypes> = ({form_type}): JSX.Element => {
   return (
     <section className={styles.form__area}>
       <Logo className={styles.logo__small} />
-      <Form form_type={props.form_type} />
+      <Form form_type={form_type} />
       <Copyright />
     </section>
   );

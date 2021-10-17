@@ -13,7 +13,7 @@ type FormPropsType = {
   form_type?: string;
 };
 
-const Form: React.FC<FormPropsType> = (props) => {
+const Form: React.FC<FormPropsType> = ({form_type}): JSX.Element => {
   const {
     register,
     handleSubmit,
@@ -26,7 +26,7 @@ const Form: React.FC<FormPropsType> = (props) => {
     console.log(data);
     return data;
   };
-  switch (props.form_type) {
+  switch (form_type) {
     case "reg":
       return (
         <form
@@ -61,7 +61,13 @@ const Form: React.FC<FormPropsType> = (props) => {
             <InputPassWrapper
               label="Пароль"
               inputId="pass"
-              tip_content={<div>?</div>}
+              tip_content={
+                <Tips
+                  content="?"
+                  message="Your password"
+                  tipId="password-tip"
+                />
+              }
               name="password"
               register={register}
               errors={errors}
@@ -70,7 +76,13 @@ const Form: React.FC<FormPropsType> = (props) => {
             <InputPassWrapper
               label="Повторите пароль"
               inputId="re-pass"
-              tip_content={<div>?</div>}
+              tip_content={
+                <Tips
+                  content="?"
+                  message="Confirm your password"
+                  tipId="repassword-tip"
+                />
+              }
               name="re-password"
               register={register}
               errors={errors}
@@ -80,7 +92,13 @@ const Form: React.FC<FormPropsType> = (props) => {
             <span className={styles.form__line} />
             <InputCheckboxWrapper
               label="Ваша роль"
-              label_tip={<Tips content={<div>?</div>} />}
+              label_tip={
+                <Tips
+                  content="?"
+                  message="Choose your role"
+                  tipId="checkbox-tip"
+                />
+              }
               name="role"
               register={register("roole")}
             />
@@ -124,7 +142,13 @@ const Form: React.FC<FormPropsType> = (props) => {
             <InputPassWrapper
               label="Пароль"
               inputId="pass"
-              tip_content={<div>?</div>}
+              tip_content={
+                <Tips
+                  content="?"
+                  message="Your password"
+                  tipId="password-tip"
+                />
+              }
               name="password"
               register={register}
               errors={errors}

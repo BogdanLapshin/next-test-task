@@ -1,12 +1,12 @@
-import styles from "./Logo.module.scss";
+import styles from "../../styles/Logo/Logo.module.scss";
 
 type LogoPropsTypes = {
   className?: string;
 };
 
-const Logo: React.FC<LogoPropsTypes> = (props) => {
+const Logo: React.FC<LogoPropsTypes> = ({className}): JSX.Element => {
   const classNames = [styles.logo];
-  props.className !== "" && classNames.push(props.className);
+  className !== "" && classNames.push(className);
 
   return (
     <div className={classNames.join(" ")}>

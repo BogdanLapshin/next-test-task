@@ -14,7 +14,7 @@ const InputCheckboxWrapper: React.FC<InputCheckboxPropsType> = ({
   label_tip,
   name,
   register,
-}) => {
+}): JSX.Element => {
   const [role, setRole] = useState("Подсказка для определенной роли 1");
   function changeChecked(event) {
     setRole(event.target.value);

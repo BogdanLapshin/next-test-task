@@ -1,13 +1,15 @@
-import styles from "./SubmitButton.module.scss";
+import styles from "../../../styles/form-elements/SubmitButton/SubmitButton.module.scss";
 
 type SubmitButtonPropsTypes = {
-  text: string
-}
+  text: string;
+};
 
-const SubmitButton: React.FC<SubmitButtonPropsTypes> = (props) => {
+const SubmitButton: React.FC<SubmitButtonPropsTypes> = ({
+  text,
+}): JSX.Element => {
   return (
     <button type="submit" className={styles.submit}>
-      <div className={styles.wrapper}>{props.text}</div>
+      <div className={styles.wrapper}>{text}</div>
     </button>
   );
 };

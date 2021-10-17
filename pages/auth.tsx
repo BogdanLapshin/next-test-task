@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import BackgroundImg from "../components/Background-img";
 import FormArea from "../components/Form-area";
-const auth = () => {
+const auth: React.FC = (): JSX.Element => {
   return (
     <>
       <Head>

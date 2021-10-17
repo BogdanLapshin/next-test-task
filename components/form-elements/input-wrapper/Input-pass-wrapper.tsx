@@ -23,18 +23,14 @@ const InputPassWrapper: React.FC<InputPassWrapperPropsType> = ({
   errors,
   trigger,
   watch,
-}) => {
+}): JSX.Element => {
   const [type, setType] = useState(true);
   function viewPassword() {
     setType(!type);
   }
   return (
     <InputWrapper className={styles.input_pass_wrapper}>
-      <Label
-        label={label}
-        inputId={inputId}
-        tips={<Tips content={tip_content} />}
-      />
+      <Label label={label} inputId={inputId} tips={tip_content} />
       <Input
         type={type ? "password" : "text"}
         inputId={inputId}

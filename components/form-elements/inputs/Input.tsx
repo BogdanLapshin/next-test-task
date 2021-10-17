@@ -14,7 +14,7 @@ const Input: React.FC<InputPassWrapperPropsType> = ({
   register,
   errors,
   trigger,
-}) => {
+}): JSX.Element => {
   const invalidClassname = errors[name] ? " " + styles.invalid : "";
   return (
     <>

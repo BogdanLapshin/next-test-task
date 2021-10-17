@@ -13,8 +13,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  div {
+  .tip__content {
     position: relative;
     left: 0.5px;
   }
+}
+.tooltip__wrapper {
+  background: rgba(0, 0, 0, 0.3);
 }

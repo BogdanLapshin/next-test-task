@@ -6,14 +6,19 @@ type FormTitlePropsType = {
   suggest_link?: string;
   action?: string;
 };
-const FormTitle: React.FC<FormTitlePropsType> = (props) => {
+const FormTitle: React.FC<FormTitlePropsType> = ({
+  title,
+  suggestion,
+  suggest_link,
+  action,
+}): JSX.Element => {
   return (
     <>
-      <legend className={styles.form__title}>{props.title}</legend>
+      <legend className={styles.form__title}>{title}</legend>
       <div className={styles.form__auth}>
-        {props.suggestion}
-        <Link href={"/" + props.suggest_link}>
-          <a className={styles.form__link}>{props.action}</a>
+        {suggestion}
+        <Link href={"/" + suggest_link}>
+          <a className={styles.form__link}>{action}</a>
         </Link>
       </div>
     </>
