@@ -1,0 +1,33 @@
+@import "./variables.module.scss";
+@import "./mixins.module.scss";
+.bg__img {
+  position: absolute;
+  left: 0;
+  @include centering;
+  width: 50%;
+  position: relative;
+  background: url("../public/assets/bg.png") center center no-repeat;
+  background-size: cover;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: $tooltip-bg;
+  }
+  @media screen and (max-width: 780px) {
+    display: none;
+  }
+}
+.project__info {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: $form-title;
+  position: relative;
+  @media screen and (max-width: 920px) {
+    font-size: 12px;
+  }
+}

@@ -1,6 +1,7 @@
+@import "../variables.module.scss";
 .copyright {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
-  color: #6c7684;
+  color: $light-gray;
 }

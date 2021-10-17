@@ -1,0 +1,31 @@
+@import "../../mixins.module.scss";
+.input__eye {
+  width: 17px;
+  height: 12px;
+  cursor: pointer;
+}
+.eye_open {
+  background: url("../../../public/assets/icons/eye-open.svg") center center
+    no-repeat;
+  background-size: contain;
+}
+.eye_close {
+  background: url("../../../public/assets/icons/eye-close.svg") center center
+    no-repeat;
+  background-size: contain;
+  width: 20;
+  height: 14px;
+}
+.input_pass_wrapper {
+  position: relative;
+  width: 100%;
+}
+.span__wrapper {
+  position: absolute;
+  bottom: 0;
+  height: 47px;
+  width: 47px;
+  @include centering;
+  right: 0;
+  border-radius: 0 8px 8px 0;
+}

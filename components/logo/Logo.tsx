@@ -10,8 +10,10 @@ const Logo: React.FC<LogoPropsTypes> = ({className}): JSX.Element => {
 
   return (
     <div className={classNames.join(" ")}>
-      Nukle<span>Ball</span>
+      Nukle
+      <span>Ball</span>
     </div>
   );
 };
+
 export default Logo;

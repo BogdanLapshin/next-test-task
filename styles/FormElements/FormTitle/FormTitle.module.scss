@@ -1,0 +1,19 @@
+@import "../../variables.module.scss";
+.form__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  color: $form-title;
+  margin-bottom: 12px;
+}
+.form__auth {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $form-info;
+  margin-bottom: 32px;
+  a {
+    color: $logo;
+  }
+}

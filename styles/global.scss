@@ -1,3 +1,4 @@
+@import "./variables.module.scss";
 html,
 #__next {
   height: 100%;
@@ -9,6 +10,9 @@ body {
   padding: 0;
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
+  @media screen and (max-width: 780px) {
+    background-color: $dark-gray;
+  }
 }
 .wrapper,
 .wrapper-auth {
@@ -21,6 +25,9 @@ body {
 .wrapper {
   @media screen and (max-height: 1100px) {
     height: auto;
+  }
+  @media screen and (max-width: 780px) {
+    height: 100%;
   }
 }
 .wrapper-auth {

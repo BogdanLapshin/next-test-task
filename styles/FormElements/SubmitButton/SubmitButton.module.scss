@@ -1,0 +1,42 @@
+@import "../../variables.module.scss";
+@import "../../mixins.module.scss";
+.submit {
+  margin-top: 36px;
+  width: 180px;
+  height: 43px;
+  position: relative;
+  @include centering;
+  border-radius: 8px;
+  outline: none;
+  background: linear-gradient(-90deg, $logo, #08aeea);
+  border-style: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 24px;
+  transition: all 0.3s ease-in-out;
+  &:active {
+    outline: none;
+  }
+  &::before {
+    content: "";
+    border-radius: 8px;
+    width: 178px;
+    height: 41px;
+    position: absolute;
+    background-color: $dark-gray;
+  }
+  &:hover {
+    background-position: 100% 0;
+    background-size: 300% 100%;
+    transform: scale(1.03);
+  }
+}
+
+.wrapper {
+  position: relative;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 17px;
+  text-align: center;
+  color: $form-title;
+}

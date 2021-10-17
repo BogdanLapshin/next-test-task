@@ -1,0 +1,23 @@
+@import "../../variables.module.scss";
+@import "../../mixins.module.scss";
+.tips {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid $light-gray;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  color: $light-gray;
+  margin-left: 8px;
+  @include centering;
+  cursor: pointer;
+  .tip__content {
+    position: relative;
+    left: 0.5px;
+  }
+}
+.tooltip__wrapper {
+  background: $tooltip-bg;
+}
